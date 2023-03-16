@@ -25,4 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
       currentValue += num;
     }
   }
+
+  // Clear Button
+  clear.addEventListener("click", function () {
+    previousValue = "";
+    currentValue = "";
+    operator = "";
+    previousScreen.textContent = currentValue;
+    currentScreen.textContent = currentValue;
+  });
+  
 });
