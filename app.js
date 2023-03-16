@@ -1,14 +1,28 @@
-// Global Variables
-let previousValue = '';
-let currentValue = '';
-let operator = '';
+let previousValue = "";
+let currentValue = "";
+let operator = "";
 
-// Selecting buttons for DOM
-let numbers = document.querySelectorAll('.number');
-let equal = document.querySelectorAll('.equal');
-let operators = document.querySelectorAll('.operator');
-let decimal = document.querySelectorAll('.decimal');
-let clear = document.querySelector('clear-btn');
+document.addEventListener("DOMContentLoaded", function () {
+  // Selecting HTML elements to reference DOM
+  let numbers = document.querySelectorAll(".number");
+  let operators = document.querySelectorAll(".operator");
+  let clear = document.querySelector("#clear-btn");
+  let equal = document.querySelector(".equal");
+  let decimal = document.querySelector(".decimal");
+  let currentScreen = document.querySelector(".current");
+  let previousScreen = document.querySelector(".previous");
 
-let previousScreen = document.querySelector('previous');
-let currentScreen = document.querySelector('current')
+
+  numbers.forEach((number) => number.addEventListener("click", function (e) {
+      handleNumber(e.target.textContent);
+      currentScreen.textContent = currentValue;
+    })
+  );
+
+  // Displaying numbers
+  function handleNumber(num) {
+    if (currentValue.length <= 6) {
+      currentValue += num;
+    }
+  }
+});
