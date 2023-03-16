@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +10,7 @@
   max-width: 1440px;
   background-color: #fff;
   padding: 12px;
+  border-radius: 15px;
 }
 
 body{
@@ -18,6 +20,7 @@ body{
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  font-family: 'Poppins', sans-serif, Verdana, Geneva, Tahoma;
   background-image: linear-gradient(to right top, #f8faff, #f1edfb, #f2dff2, #f6cfe0, #f9c1c6);
 }
 
@@ -25,7 +28,8 @@ body{
   height: 75px;
   width: 75px;
   margin: 15px;
-  font-size: 40px;
+  font-size: 35px;
+  color: #2A3064;
 }
 
 .number{
@@ -73,6 +77,11 @@ body{
   background-color: #B833FF;
 }
 
+#clear-btn:active {
+  border: 1px solid black;
+  
+}
+
 .first-row{
   display: flex;
   justify-content: center;
@@ -82,13 +91,14 @@ body{
 
 #screen{
   width: 300px;
-  border: 1px solid #FF3336;
+  border: 1px solid #F23A3A;
   height: 75px;
   margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  border-radius: 5px;
 }
 
 .previous{
