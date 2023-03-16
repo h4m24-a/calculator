@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Displaying numbers
   function handleNumber(num) {
-    if (currentValue.length <= 6) {
+    if (currentValue.length <= 5) {
       currentValue += num;
     }
   }
@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", function () {
     previousScreen.textContent = currentValue;
     currentScreen.textContent = currentValue;
   });
-  
+
 });
