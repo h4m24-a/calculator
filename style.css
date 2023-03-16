@@ -6,10 +6,9 @@
 }
 
 .calculator {
-  border: 2px solid black;
+  border: 5px solid black;
   max-width: 1440px;
   background-color: #fff;
-  padding: 12px;
   border-radius: 15px;
 }
 
@@ -28,13 +27,12 @@ body{
   height: 75px;
   width: 75px;
   margin: 15px;
-  font-size: 35px;
-  color: #2A3064;
+  font-size: 30px;
 }
 
 .number{
-  border: 1px solid #33FF5B;
-  border-radius: 10px;
+  background-color: #33FF5B;
+  border-radius: 50%;
 }
 
 .number:hover{
@@ -42,26 +40,26 @@ body{
 }
 
 .operator{
-  border: 1px solid #4d7cf5;
-  border-radius: 10px;
+  background-color:#f8c154;
+  border-radius: 50%;
 }
 
 .operator:hover{
-  background-color: #396ef5;
-}
-
-.decimal{
-  border: 1px solid #f8c154;
-  border-radius: 10px;
-}
-
-.decimal:hover{
   background-color:  #FFBB33;
 }
 
+.decimal{
+  background-color: #4d7cf5;
+  border-radius: 50%;
+}
+
+.decimal:hover{
+  background-color: #396ef5;
+}
+
 .equal{
-  border: 1px solid #f74daa;
-  border-radius: 10px;
+  background-color: #f74daa;
+  border-radius: 50%;
 }
 
 .equal:hover{
@@ -69,12 +67,12 @@ body{
 }
 
 #clear-btn{
-  border: 1px solid #bc50f7;
-  border-radius: 10px;
+  background-color: #f75050;
+  border-radius: 50%;
 }
 
 #clear-btn:hover{
-  background-color: #B833FF;
+  background-color: #f76868;
 }
 
 #clear-btn:active {
@@ -87,6 +85,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  border-bottom: solid 4px black;
 }
 
 #screen{
@@ -98,15 +97,17 @@ body{
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  border-radius: 5px;
+  border-radius: 9px;
 }
 
 .previous{
   font-size: 20px;
+  padding-right: 4px;
 }
 
 .current{
   font-size: 30px;
+  padding-right: 4px;
 }
 
 
