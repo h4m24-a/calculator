@@ -114,7 +114,7 @@ body {
   width: 300px;
   border: solid 1px black;
   height: 75px;
-  margin: 15px;
+  margin-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
