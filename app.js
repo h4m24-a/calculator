@@ -38,10 +38,14 @@ let previousDisplay = document.querySelector(".previous");
 
   
   // Decimal Button
+  decimal.addEventListener("click", function(){
+    decimalNum();
+})
 
 
   // Equals Button and round long decimal answers
     equal.addEventListener('click', function(){
+      if(currentValue != '' && previousValue != ''){    // Only click equals when number is selected
       operate();
       previousDisplay.textContent = '';
       currentDisplay.textContent = previousValue;
@@ -50,6 +54,7 @@ let previousDisplay = document.querySelector(".previous");
       } else {
       currentDisplay.textContent = previousValue.slice(0,5) + "...";
       }
+    }
   })
 
 });
@@ -88,7 +93,17 @@ function operate(){
   currentValue = previousValue.toString();
 }
 
+  // Decimal
+  function decimalNum(){
+    if(!currentValue.includes(".")){
+        currentValue += '.';
+    }
+  }
+
   // Rounding Function
 function roundNum(num){
-  return Math.round(num * 1000) / 1000;
+  return Math.round(num * 100) / 100;
 }
+
+
+
