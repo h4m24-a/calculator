@@ -15,8 +15,8 @@ let previousDisplay = document.querySelector(".previous");
 
   // Looping through numbers
   numbers.forEach((number) => number.addEventListener("click", function (e) {
-      handleNumber(e.target.textContent);
-      currentDisplay.textContent = currentValue;
+    handleNumber(e.target.textContent);
+    currentDisplay.textContent = currentValue;
   }));
 
 
@@ -104,6 +104,3 @@ function operate(){
 function roundNum(num){
   return Math.round(num * 100) / 100;
 }
-
-
-
