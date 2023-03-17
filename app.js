@@ -9,30 +9,46 @@ document.addEventListener("DOMContentLoaded", function () {
   let clear = document.querySelector("#clear-btn");
   let equal = document.querySelector(".equal");
   let decimal = document.querySelector(".decimal");
-  let currentScreen = document.querySelector(".current");
-  let previousScreen = document.querySelector(".previous");
+  let currentDisplay = document.querySelector(".current");
+  let previousDisplay = document.querySelector(".previous");
 
-
+  // Looping through numbers
   numbers.forEach((number) => number.addEventListener("click", function (e) {
       handleNumber(e.target.textContent);
-      currentScreen.textContent = currentValue;
-    })
-  );
+      currentDisplay.textContent = currentValue;
+    }));
 
-  // Displaying numbers
+  // Looping through operators
+  operators.forEach((op) => op.addEventListener("click", function(e){
+    handleOperator(e.target.textContent)
+    previousDisplay.textContent = previousValue + " " + operator;
+    currentDisplay.textContent = currentValue;
+}));
+
+   // Clear Button
+   clear.addEventListener("click", function () {
+    previousValue = "";
+    currentValue = "";
+    operator = "";
+    previousDisplay.textContent = currentValue;
+    currentDisplay.textContent = currentValue;
+  });
+
+});
+
+
+
+
+  
   function handleNumber(num) {
     if (currentValue.length <= 5) {
       currentValue += num;
     }
   }
 
-  // Clear Button
-  clear.addEventListener("click", function () {
-    previousValue = "";
-    currentValue = "";
-    operator = "";
-    previousScreen.textContent = currentValue;
-    currentScreen.textContent = currentValue;
-  });
 
-});
+  function handleOperator(op) {
+    operator = op;
+    previousValue = currentValue;
+    currentValue = '';
+  }
