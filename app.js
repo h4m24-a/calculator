@@ -11,6 +11,7 @@ let equal = document.querySelector(".equal");
 let decimal = document.querySelector(".decimal");
 let currentDisplay = document.querySelector(".current");
 let previousDisplay = document.querySelector(".previous");
+let backspace = document.querySelector("#backspace-btn");
 
 
   // Looping through numbers
@@ -56,6 +57,14 @@ let previousDisplay = document.querySelector(".previous");
       }
     }
   })
+
+
+  // Backspace button
+  backspace.addEventListener("click", function(){
+    currentValue = currentDisplay.textContent.slice(0, -1);
+    currentDisplay.textContent = currentValue;
+})
+
 
 });
 
