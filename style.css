@@ -94,6 +94,10 @@ body {
   color: black;
 }
 
+#backspace-btn:hover {
+  background-color: #f0d439;
+}
+
 #clear-btn:hover {
   background-color: rgb(226, 55, 72);
 }
