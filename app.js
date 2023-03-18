@@ -109,6 +109,83 @@ function operate(){
     }
   }
 
+  window.onkeydown = function (e) {
+    e.preventDefault();
+    let x = e.key;
+    let choice;
+    let currentDisplay = document.querySelector(".current");
+    switch (x) {
+      case "1":
+        choice = document.getElementById("1");
+        choice.click();
+        break;
+      case "2":
+        choice = document.getElementById("2");
+        choice.click();
+        break;
+      case "3":
+        choice = document.getElementById("3");
+        choice.click();
+        break;
+      case "4":
+        choice = document.getElementById("4");
+        choice.click();
+        break;
+      case "5":
+        choice = document.getElementById("5");
+        choice.click();
+        break;
+      case "6":
+        choice = document.getElementById("6");
+        choice.click();
+        break;
+      case "7":
+        choice = document.getElementById("7");
+        choice.click();
+        break;
+      case "8":
+        choice = document.getElementById("8");
+        choice.click();
+        break;
+      case "9":
+        choice = document.getElementById("9");
+        choice.click();
+        break;
+      case "0":
+        choice = document.getElementById("0");
+        choice.click();
+        break;
+      case "/":
+        choice = document.getElementById("/");
+        choice.click();
+        break;
+      case "*":
+        choice = document.getElementById("*");
+        choice.click();
+        break;
+      case "-":
+        choice = document.getElementById("-");
+        choice.click();
+        break;
+      case "+":
+        choice = document.getElementById("+");
+        choice.click();
+        break;
+      case ".":
+        choice = document.getElementById(".");
+        choice.click();
+        break;
+      case "Enter":
+        choice = document.getElementById("=");
+        choice.click();
+        break;
+      case "Backspace":
+        currentValue = currentDisplay.textContent.slice(0, -1);
+        currentDisplay.textContent = currentValue;
+        break;
+    }
+  };
+
   // Rounding Function
 function roundNum(num){
   return Math.round(num * 100) / 100;
