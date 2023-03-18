@@ -109,6 +109,7 @@ function operate(){
     }
   }
 
+  // Keyboard support
   window.onkeydown = function (e) {
     e.preventDefault();
     let x = e.key;
