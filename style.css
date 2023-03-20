@@ -164,7 +164,7 @@ body {
     height: 95px;
     width: 95px;
     margin: 20px;
-    font-size: 30px;
+    font-size: 40px;
     color: black;
     box-shadow: 1px 1px 2px;
   }
@@ -176,7 +176,12 @@ body {
 
   
   .previous, .current {
-    font-size: 30px;
+    font-size: 29px;
+  }
+
+  #screen {
+    height: 90px;
+    width: 320px;
   }
 
 }
@@ -190,6 +195,15 @@ body {
     color: black;
     box-shadow: 1px 1px 2px;
   }
+  #screen {
+    width: 300px;
+    height: 75px;
+  }
+
+  .previous, .current {
+    font-size: 25px;
+  }
+
 
 }
 
@@ -198,10 +212,19 @@ body {
   .btn {
     height: 70px;
     width: 70px;
-    margin: 5px;
+    margin: 8px;
     font-size: 30px;
     color: black;
     box-shadow: 1px 1px 2px;
+  }
+
+  .previous, .current {
+    font-size: 23px;
+  }
+
+  #screen {
+    width: 280px;
+    height: 70px;
   }
 
 }
@@ -217,7 +240,7 @@ body {
   .btn {
     height: 65px;
     width: 65px;
-    margin: 5px;
+    margin: 7px;
     font-size: 30px;
     color: black;
     box-shadow: 1px 1px 2px;
@@ -227,5 +250,6 @@ body {
     justify-content: center;
     align-items: center;
   }
+  
 
 }
